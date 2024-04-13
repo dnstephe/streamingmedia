@@ -46,50 +46,169 @@ table {
     border-spacing: 0;
 }
 /* my css code*/
-    html {
+html {
         background-color: #020659;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-    body {
+body {
         width: 375px;
         margin: 0 auto;
         background-color: #ffffff;
-        
 }
-    header{
+header{
+        display: grid;
+        grid-template-columns: 1fr;
         width: 100%;
-        background-image: linear-gradient(75deg, rgb(3 10 88 / 100%) 50%, rgb(0 0 0 / 100%) 90%);
+        background-image: linear-gradient(75deg, rgb(33 4 217 / 100%) 7%, rgb(0 0 0 / 100%) 60%);
         color:#ffffff;
 }
-    nav{
-        color:#ffffff;
-        background-color:#020873;
-        
+nav{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        background-color:#020873;       
+}   
+h1{
+    font-size:1.25em;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-top: 5px;
 }
-
-    h1{
-        font-size:1.25em;
+p{
+    padding: 10px 20px 20px 10px;
 }
-
-    h2 h3{
-        font-size: 1em;
+nav h2{
+    display: none;
 }
-
-    p dl dd{
-        font-size: 1em;
+h1 h3 {
+    text-transform: uppercase;
 }
-
-    footer p {
-        font-size: .75em;
+a{
+    font-size: 15px;
+    color:#ffffff;
+    font-weight: bold;
+    text-decoration: none;
 }
-    nav h2{ 
-        visibility:hidden;
-}
-/*hamburger menu
-    ul {
+ul {
     overflow: hidden;
     max-height: 0;
     transition: max-height .2s ease-out;
+}
+.trending{
+    width:375px;
+    display: inline-flex; 
+    align-items: baseline;
+}
+.trending h2{
+    text-transform: uppercase;
+    color:#590242;
+    background:#ffffff;
+    font-weight: bold;
+    margin-right: 50px;
+    padding: 10px 10px 10px 10px;
+}
+.trending h3{
+    text-transform: uppercase;
+    color:#590242;
+    font-weight: bold;
+}
+.scroll{
+    display: flex; 
+    background-color: lightgrey;
+    color:#590242;
+    justify-content: space-between;
+    padding: 10px;
+}
+.scroll img{
+    margin:10px 10px 10px 10px;
+}
+.scroll a{
+    width: 70px;
+    height: 20px;
+    color:#ffffff;
+    background: #590242;
+    text-decoration: none;
+    margin-top:400px;
+    padding:10px 20px 20px 20px;
+    border-radius: 20px 20px 20px 20px;
+    float:right;
+    clear:right;
+}
+.scroll audio{
+    margin:15px 15px 15px 15px;
+    border-radius: 30px 30px 30px 30px;
+
+}
+.playlists{
+    display:flex;
+    background-color:#2699FB;
+}
+.playlists h2{
+    text-transform: uppercase;
+    color:#590242;
+    background: #ffffff;
+    font-weight: bold;
+}
+.playlists h3{
+    text-transform:uppercase;
+    color: #ffffff;
+    font-weight: bold;
+}
+.playlists p{
+    color:#ffffff;
+}
+.playlists a{
+    width: 70px;
+    height: 20px;
+    color:#ffffff;
+    background: #590242;
+    margin-top:400px;
+    padding:10px 20px 20px 20px;
+    border-radius: 20px 20px 20px 20px;
+}
+.curated{
+    display:flexbox;
+    background-color:#020873;
+}
+.curated a{
+    width: 70px;
+    height: 20px;
+    color:#ffffff;
+    background: #590242;
+    margin-top:400px;
+    padding:10px 20px 20px 20px;
+    border-radius: 20px 20px 20px 20px;
+}
+.curated img{
+    float:left;
+    margin:20px;
+    position:static;
+    clear:both;
+}
+.curated h2{
+    text-transform: uppercase;
+    color:#590242;
+    background:#ffffff;
+    font-weight: bold;
+    text-align:left;
+}
+.curated h3{
+    text-transform:uppercase;
+    color: #ffffff;
+    font-weight: bold;
+    text-align:center;
+    margin-bottom:10px;
+    margin-top:30px;
+}
+.curated p{
+    color:#ffffff;
+    text-align:center;
+}
+
+footer p{
+    text-align: center;
+    color:#590242;
 }
     label {
     cursor: pointer;
@@ -98,7 +217,7 @@ table {
     position: relative;
     user-select: none;
 }
-label span {
+    label span {
     background-color: #ffffff;
     display: block;
     height: 2px;
@@ -106,7 +225,7 @@ label span {
     transition: background-color .2s ease-out;
     width: 18px;
 }
-label span:before, label span:after {
+    label span:before, label span:after {
     background: #ffffff;
     content: '';
     display: block;
@@ -115,58 +234,32 @@ label span:before, label span:after {
     transition: all .2s ease-out;
     width: 100%;
 }
-
-label span:before {
+    label span:before {
     top: 5px;
 }
-label span:after {
+    label span:after {
     top: -5px;
 }
-input {
+    input {
     display: none;
 }
-input:checked ~ ul {
+    input:checked ~ ul {
     max-height: 500px;
 }
-input:checked ~ label span {
+    input:checked ~ label span {
     background: transparent;
 }
-input:checked ~ label span:before {
+    input:checked ~ label span:before {
     transform: rotate(-45deg);
 }
-input:checked ~ label span:after {
+    input:checked ~ label span:after {
     transform: rotate(45deg);
 }
-input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
+    input:checked ~ label:not(.steps) span:before, input:checked ~ label:not(.steps) span:after {
     top: 0;
 }
 
-@media screen and (min-width:834px) {
-    ul {
-        overflow: visible;
-        position: absolute;
-        top: 0;
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    }
-    label span, input {
-        display: none;
-    }
-}
-*/
-
-/*audio*/
-audio::-webkit-media-controls-mute-button {
-
-}
-audio::-webkit-media-controls-play-button {
-
-}
-audio::-webkit-media-controls-enclosure {
-
-}
-
-/*scroll bars
+    /*scroll bars
 #trending ::-webkit-scrollbar {
 
 }
@@ -191,3 +284,74 @@ audio::-webkit-media-controls-enclosure {
 #playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
 
 }*/
+
+
+@media screen and (min-width:834px){
+    body{
+        width: 834px;
+    }
+    nav a{
+        color:#ffffff;
+    }
+    ul {
+        overflow: visible;
+        position: absolute;
+        top: 0;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        padding: 10px;
+    }
+    label span, input{
+        display: none;
+    }
+    nav li .home{
+        display:inline;
+        position: absolute;
+    }
+    h1{
+        font-size:1.25em;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .trending h2{
+        text-transform: uppercase;
+        color:#590242;
+        text-transform: bold;
+    }
+    .playlists{
+        display: grid;
+    }
+    .playlists h2{
+        text-transform:uppercase;
+        color:#590242;
+        text-transform: bold;
+    }
+    .curated{
+        display: grid;
+    }
+    .curated p{
+        color:#ffffff;
+        text-align:center;
+    }
+    h2 h3{
+        font-size: 1em;
+    }
+    p dl dd{
+        font-size: 1em;
+    }
+    footer p{
+        font-size: .75em;
+    }
+}
+/*audio*/
+audio::-webkit-media-controls-mute-button {
+
+}
+audio::-webkit-media-controls-play-button {
+
+}
+audio::-webkit-media-controls-enclosure {
+
+}
+
