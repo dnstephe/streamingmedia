@@ -158,7 +158,6 @@ audio{
     background-color:#2699FB;
 }
 .playlists h2{
-    display:flex;
     text-transform: uppercase;
     color:#590242;
     background: #ffffff;
@@ -208,7 +207,6 @@ audio{
     margin-top:400px;
     padding:10px 20px 20px 20px;
     border-radius: 20px 20px 20px 20px;
-    float:inline-end;
 }
 .curated img{
     float:left;
@@ -301,7 +299,7 @@ footer p{
 }
 #trending ::-webkit-scrollbar-thumb:hover {
 
-}
+}*/
 #playlists ::-webkit-scrollbar, #curated ::-webkit-scrollbar {
 
 }
@@ -314,7 +312,7 @@ footer p{
 #playlists ::-webkit-scrollbar-thumb:hover, #curated ::-webkit-scrollbar-thumb:hover {
 
 }
-*/
+
 
 @media screen and (min-width:834px){
     body{
@@ -349,8 +347,9 @@ footer p{
         text-transform: bold;
     }
     .playlists{
-        display: flex;
+        display: grid;
     }
+   
     .curated{
         display: inline-flex;
     }
@@ -368,7 +367,7 @@ footer p{
         font-size: .75em;
     }
 }
-/*audio
+/*audio*/
 audio::-webkit-media-controls-mute-button {
 
 }
@@ -378,4 +377,4 @@ audio::-webkit-media-controls-play-button {
 audio::-webkit-media-controls-enclosure {
 
 }
-*/
+
